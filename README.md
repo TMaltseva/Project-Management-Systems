@@ -91,11 +91,9 @@ docker-compose up --build
 
 2. Приложение будет доступно по адресу:
 
-Фронтенд: http://localhost
-
-API: http://localhost:3000
-
-Документация API: http://localhost:3000/swagger/index.html
+- Фронтенд: http://localhost:80  
+- API: http://localhost:8080  
+- Документация API: http://localhost:8080/swagger/index.html
 
 ##  Локальная разработка
 
