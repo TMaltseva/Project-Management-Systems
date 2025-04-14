@@ -40,6 +40,7 @@ const Header: React.FC = () => {
       </div>
       <div className="app-header__nav">
         <Menu
+          data-testid="main-menu"
           theme="dark"
           mode="horizontal"
           selectedKeys={[getSelectedKey()]}
@@ -47,13 +48,13 @@ const Header: React.FC = () => {
             {
               key: 'boards',
               icon: <ProjectOutlined />,
-              label: 'Boards',
+              label: <span data-testid="menu-item-boards">Boards</span>,
               onClick: () => navigate('/boards'),
             },
             {
               key: 'tasks',
               icon: <UnorderedListOutlined />,
-              label: 'Tasks',
+              label: <span data-testid="menu-item-tasks">Tasks</span>,
               onClick: () => navigate('/tasks'),
             },
           ]}
