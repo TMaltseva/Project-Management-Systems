@@ -1,0 +1,40 @@
+$primary-color: #1890ff;
+$success-color: #52c41a;
+$warning-color: #faad14;
+$error-color: #f5222d;
+$task-color-button: #f7f7f7;
+
+$text-color: rgba(0, 0, 0, 0.85);
+$text-color-secondary: rgba(0, 0, 0, 0.45);
+$disabled-color: rgba(0, 0, 0, 0.25);
+
+$bg-color-light: #f0f2f5;
+$bg-color-base: #f0f0f0;
+
+$border-color-base: #d9d9d9;
+$border-color-split: rgba(0, 0, 0, 0.06);
+
+$font-size-base: 14px;
+$font-size-sm: 12px;
+$font-size-lg: 16px;
+
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1600px;
+
+$shadow-1: 0 2px 8px rgba(0, 0, 0, 0.15);
+$shadow-2: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+$border-radius-base: 4px;
+$border-radius-sm: 2px;
+
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+$animation-duration-base: 0.2s;
+
+$zindex-dropdown: 1050;
+$zindex-modal: 1000;
+$zindex-tooltip: 1060;
+$zindex-notification: 1010;
