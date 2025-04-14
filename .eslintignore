@@ -3,3 +3,7 @@ dist
 .vite
 .husky
 .git
+
+**/*.test.ts
+**/*.test.tsx
+**/__tests__/**

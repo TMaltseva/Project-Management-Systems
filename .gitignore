@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.vite/
 *.local
 
 # Editor directories and files
@@ -32,3 +33,8 @@ docker-compose.override.yml
 
 /server/.env
 .env.development
+.qodo
+
+# Test coverage
+/coverage
+.nyc_output
