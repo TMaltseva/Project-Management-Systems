@@ -15,7 +15,7 @@ services:
       - app-network
 
   api:
-    build: ./server/server
+    build: ./server
     ports:
       - "8080:8080"
     networks:
