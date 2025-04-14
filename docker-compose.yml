@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: 
+      context: .
+      dockerfile: src/Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      VITE_API_URL: http://api:3000
+    depends_on:
+      - api
+    networks:
+      - app-network
+
+  api:
+    build: ./server/server
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
