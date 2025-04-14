@@ -1,0 +1,21 @@
+.task-form {
+  &__draft-notice {
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    background-color: #fffbe6;
+    border: 1px solid #ffe58f;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  &__button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+  
+  &__board-link {
+    margin-right: auto;
+  }
+}

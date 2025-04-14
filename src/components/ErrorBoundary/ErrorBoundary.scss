@@ -1,0 +1,32 @@
+    .error-boundary {
+        text-align: center;
+        padding: 48px 24px;
+        max-width: 500px;
+        margin: 0 auto;
+        
+        &__title {
+            margin-bottom: 16px;
+            color: $error-color;
+        }
+        
+        &__details {
+            width: 100%;
+            margin-bottom: 24px;
+            padding: 16px;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid lighten($error-color, 20%);
+            text-align: left;
+            white-space: pre-wrap;
+            word-break: break-word;
+            overflow: auto;
+            max-height: 60vh;
+            font-family: monospace;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        button {
+            min-width: 120px;
+        }
+    }

@@ -1,0 +1,39 @@
+.boards-page {
+    .board-card {
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      
+      &__icon {
+        font-size: 24px;
+        color: $primary-color;
+        margin-bottom: 16px;
+      }
+      
+      &__title {
+        margin-bottom: 8px;
+      }
+      
+      &__description {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+        
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 20px;
+        }
+      }
+      
+      &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+      }
+    }
+  }

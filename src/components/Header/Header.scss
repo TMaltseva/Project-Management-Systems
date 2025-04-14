@@ -1,0 +1,86 @@
+.app-header {
+    &__logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      display: flex;
+      align-items: center;
+
+      .logo-text {
+        font-size: 18px;
+        font-weight: 600;
+        
+        @include respond-to(md) {
+          display: none;
+        }
+      
+        .anticon-project {
+            transition: transform 0.3s;
+            
+            &:hover {
+            transform: scale(1.1);
+            }
+        }
+    }
+}
+    
+    &__nav {
+      flex: 1;
+      margin: 0 24px;
+      
+      .ant-menu {
+        background-color: transparent;
+        border-bottom: none;
+        
+        .ant-menu-item {
+          color: rgba(255, 255, 255, 0.7);
+          
+          &:hover {
+            color: white;
+          }
+          
+          &-selected {
+            color: white;
+            
+            &::after {
+              border-bottom-color: white;
+            }
+          }
+        }
+      }
+    }
+
+    @include respond-to(md) { 
+        padding: 0 16px;
+        
+        &__logo {
+          font-size: 16px;
+        }
+        
+        &__nav {
+          margin: 0 12px;
+          
+          .ant-menu-item {
+            padding: 0 8px !important;
+          }
+        }
+        
+        .ant-btn {
+            padding: 8px;
+            min-width: 40px;
+          
+          .anticon {
+            margin: 0 !important;
+          }
+        }
+      }
+
+      .create-task-btn {
+        .desktop-only {
+          @include respond-to(xs) {
+            display: none;
+          }
+        }
+      }
+    }
+  

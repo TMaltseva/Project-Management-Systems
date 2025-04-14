@@ -1,0 +1,35 @@
+.board-page {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    
+    &__title {
+      flex: 1;
+
+      .ant-typography {
+        margin: 0;
+
+        @include respond-to(md) {
+            font-size: 18px;
+        }
+      }
+    }
+    
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      margin-top: 24px;
+      width: 100%;
+      max-width: 1400px;
+      padding: 0 24px; 
+      margin: 24px auto 0;
+      box-sizing: border-box;
+    }
+  }

@@ -1,0 +1,7 @@
+.task-modal {
+  .ant-modal-body {
+    padding: 24px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  }
+}

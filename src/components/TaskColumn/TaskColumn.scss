@@ -1,0 +1,54 @@
+.task-column {
+    flex: 0 0 300px;
+    min-width: 300px;
+    scroll-snap-align: start;
+    max-width: 100%;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 16px;
+
+    @include respond-to(md) {
+        flex: 1 1 auto;
+        min-width: auto;
+        max-width: none;
+    }
+    
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    
+    &__title {
+      margin: 0 !important;
+    }
+    
+    &__counter {
+      background-color: rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      padding: 2px 8px;
+      font-size: 12px;
+      min-width: 24px;
+      text-align: center;
+    }
+    
+    &__content {
+      min-height: 200px;
+      max-height: calc(100vh - 280px);
+      overflow-y: auto;
+    }
+    
+    &__skeleton {
+      margin-bottom: 16px;
+    }
+    
+    &--can-drop {
+      background-color: rgba(24, 144, 255, 0.05);
+    }
+    
+    &--is-over {
+      background-color: rgba(24, 144, 255, 0.15);
+      box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.5);
+    }
+  }

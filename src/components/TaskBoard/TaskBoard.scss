@@ -1,0 +1,38 @@
+.task-board {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: $primary-color transparent;
+    flex-wrap: nowrap;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: $primary-color;
+      border-radius: 4px;
+    }
+
+    &__columns {
+      box-sizing: border-box;
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+      
+      @include respond-to(md) {
+        flex-direction: column;
+        overflow-x: visible;
+        gap: 24px;
+        padding: 0 16px; 
+      }
+    }
+    
+    &__empty {
+      display: flex;
+      justify-content: center;
+      padding: 48px 0;
+    }
+  }
