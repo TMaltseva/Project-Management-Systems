@@ -37,11 +37,13 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    proxy: {
-      '/api/v1': {
-        target: env.VITE_API_URL || 'http://localhost:8080',
-        changeOrigin: true,
-        rewrite: (path: string) => path.replace(/^\/api\/v1/, ''),
+    server: {
+      proxy: {
+        '/api/v1': {
+          target: env.VITE_API_URL || 'http://localhost:8080',
+          changeOrigin: true,
+          rewrite: (path: string) => path.replace(/^\/api\/v1/, ''),
+        },
       },
     },
     build: {
