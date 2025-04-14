@@ -77,9 +77,9 @@ git clone https://github.com/TMaltseva/project-management-system.git
 cd project-management-system
 ```
 
-2. Инициализация подмодулей (если нужно):
-```
-git submodule update --init --recursive
+2. ### Установка субмодуля сервера
+```bash
+git clone https://github.com/avito-tech/tech-internship.git server
 ```
 
 ##  Локальная разработка
@@ -87,13 +87,13 @@ git submodule update --init --recursive
 ### Запуск сервера
 
 1. Перейдите в папку сервера и установите зависимости:
-```
+```bash
 cd server/server
 make initial-start 
 ```
 
 2. Установите зависимости и запустите:
-```
+```bash
 make run  # или go run cmd/service/main.go
 ```
 3. Сервер будет доступен на http://localhost:8080
@@ -102,12 +102,12 @@ make run  # или go run cmd/service/main.go
 
 ### Клиентская часть
 1. В отдельном терминале перейдите в папку клиента:
-```
+```bash
 cd src
 ```
 
 2. Установите зависимости и запустите:
-```
+```bash
 npm install
 npm run dev
 ```
