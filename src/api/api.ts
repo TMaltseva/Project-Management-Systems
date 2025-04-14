@@ -100,10 +100,16 @@ export const createAbortableRequest = <T>(
 
 export const checkConnection = async (): Promise<boolean> => {
   try {
-    await api.get('/tasks?limit=1');
+    console.log('Attempting to check connection');
+    const response = await api.get('tasks', { params: { limit: 1 } });
+    console.log('Connection check response:', response);
     return true;
   } catch (error) {
-    console.error('Connection check error:', error);
+    console.error('Full connection check error:', error);
+    if (axios.isAxiosError(error)) {
+      console.error('Error details:', error.response?.data);
+      console.error('Error status:', error.response?.status);
+    }
     return false;
   }
 };
