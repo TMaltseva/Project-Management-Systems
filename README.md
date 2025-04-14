@@ -82,19 +82,6 @@ cd project-management-system
 git submodule update --init --recursive
 ```
 
-## Запуск в Docker (рекомендуемый способ)
-
-1. Соберите и запустите контейнеры::
-```
-docker-compose up --build
-```
-
-2. Приложение будет доступно по адресу:
-
-- Фронтенд: http://localhost:80  
-- API: http://localhost:8080  
-- Документация API: http://localhost:8080/swagger/index.html
-
 ##  Локальная разработка
 
 ### Запуск сервера
