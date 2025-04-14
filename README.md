@@ -77,18 +77,13 @@ git clone https://github.com/TMaltseva/project-management-system.git
 cd project-management-system
 ```
 
-2. ### Установка субмодуля сервера
-```bash
-git clone https://github.com/avito-tech/tech-internship.git server
-```
-
 ##  Локальная разработка
 
 ### Запуск сервера
 
 1. Перейдите в папку сервера и установите зависимости:
 ```bash
-cd server/server
+cd server
 make initial-start 
 ```
 
