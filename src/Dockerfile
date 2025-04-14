@@ -1,11 +1,10 @@
 FROM node:20-alpine as build
 
 WORKDIR /app
-COPY src/package*.json ./
+COPY package*.json ./
 RUN npm ci
 
-COPY src/ .
-
+COPY src/ ./src/
 RUN npm run build
 
 FROM nginx:alpine

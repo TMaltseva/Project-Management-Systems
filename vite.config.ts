@@ -11,6 +11,17 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './setupTests.ts',
+      css: true,
+      coverage: {
+        provider: 'v8',
+        reporter: ['text', 'html'],
+        reportsDirectory: './coverage',
+      },
+    },
     resolve: {
       alias: {
         '@': resolve(__dirname, './src'),
@@ -27,6 +38,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
+      port: 3000,
       proxy: {
         '/api': {
           target: env.VITE_API_URL || 'http://localhost:8080',

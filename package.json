@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "cd src && npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "preview": "vite preview",
@@ -14,6 +14,7 @@
     "pre-commit": "npm run lint",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "inspect:build": "vite build && ls -la dist"
   },
   "dependencies": {
@@ -37,6 +38,7 @@
     "@types/react-dnd": "^2.0.36",
     "@types/react-dom": "^18.3.6",
     "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^1.6.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier": "^5.1.3",
@@ -46,11 +48,12 @@
     "globals": "^15.14.0",
     "husky": "^9.0.11",
     "jsdom": "^24.0.0",
+    "msw": "^2.7.4",
     "prettier": "^3.2.5",
     "sass": "^1.73.7",
     "typescript": "~5.4.3",
     "typescript-eslint": "^8.29.1",
     "vite": "^5.2.2",
-    "vitest": "^1.3.1"
+    "vitest": "^1.6.1"
   }
 }
