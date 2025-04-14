@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Layout, message } from 'antd';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -8,6 +8,7 @@ import Header from './components/Header/Header';
 import Loader from './components/Loader/Loader';
 import NotFound from './components/404/NotFound';
 import TaskModal from './components/TaskModal/TaskModal';
+import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 
 import { ModalProvider } from './context/ModalContext';
 
@@ -32,26 +33,42 @@ const { Content } = Layout;
 const App: React.FC = () => {
   const [isConnected, setIsConnected] = useState<boolean | null>(null);
 
-  useEffect(() => {
-    const checkServerConnection = async () => {
-      try {
-        const connected = await checkConnection();
-        setIsConnected(connected);
+  const checkServerConnection = useCallback(async () => {
+    try {
+      const connected = await checkConnection();
+      setIsConnected(connected);
 
-        if (!connected) {
-          message.error('Failed to connect to the server. Check that the server is running.');
-        }
-      } catch {
-        setIsConnected(false);
-        message.error('An error occurred while connecting to the server.');
+      if (!connected) {
+        message.error({
+          content: 'Failed to connect to the server. Check that the server is running.',
+          key: 'connection-error',
+        });
       }
-    };
-
-    checkServerConnection();
+    } catch {
+      setIsConnected(false);
+      message.error({
+        content: 'An error occurred while connecting to the server.',
+        key: 'connection-error',
+      });
+    }
   }, []);
+
+  useEffect(() => {
+    checkServerConnection();
+  }, [checkServerConnection]);
 
   if (isConnected === null) {
     return <Loader />;
+  }
+
+  if (isConnected === false) {
+    return (
+      <ErrorMessage
+        title="Connection failed"
+        message="Failed to connect to the server. Please check that the server is running."
+        retry={checkServerConnection}
+      />
+    );
   }
 
   return (
