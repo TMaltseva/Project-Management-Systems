@@ -87,11 +87,7 @@ cd server
 make initial-start 
 ```
 
-2. Установите зависимости и запустите:
-```bash
-make run  # или go run cmd/service/main.go
-```
-3. Сервер будет доступен на http://localhost:8080
+2. Сервер будет доступен на http://localhost:8080
 
 Для полной пересборки используйте make initial-start
 
