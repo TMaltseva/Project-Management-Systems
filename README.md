@@ -77,6 +77,19 @@ git clone https://github.com/TMaltseva/project-management-system.git
 cd project-management-system
 ```
 
+## Запуск в Docker (рекомендуемый способ)
+
+1. Соберите и запустите контейнеры:
+```bash
+docker-compose up --build
+```
+
+2. Приложение будет доступно по адресу:
+
+- Фронтенд: http://localhost:3000/  
+- API: http://localhost:8080  
+- Документация API: http://localhost:8080/swagger/index.html
+
 ##  Локальная разработка
 
 ### Запуск сервера
