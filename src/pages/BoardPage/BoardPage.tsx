@@ -5,7 +5,8 @@ import { LeftOutlined } from '@ant-design/icons';
 import { DndProvider } from 'react-dnd/dist/core';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
-import { useBoards, useBoardTasks, useUpdateTaskStatus } from '@/hooks/useQueries';
+import { useBoards, useBoardTasks } from '@/hooks/api/useBoards';
+import { useUpdateTaskStatus } from '@/hooks/api/useTask';
 import { useModal } from '@/context/ModalContext';
 import { TaskStatus, Task } from '@/types';
 

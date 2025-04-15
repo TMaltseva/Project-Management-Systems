@@ -16,3 +16,12 @@ export type ApiResponse<T> = T | ApiError;
 export interface CreateTaskResponse {
   id: number;
 }
+
+export const QueryKeys = {
+  BOARDS: 'boards',
+  BOARD_TASKS: 'board-tasks',
+  TASKS: 'tasks',
+  TASK: 'task',
+  USERS: 'users',
+  USER_TASKS: 'user-tasks',
+};

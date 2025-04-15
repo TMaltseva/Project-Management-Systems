@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, List, Typography, Skeleton, Button, Tooltip } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRightOutlined, ProjectOutlined } from '@ant-design/icons';
-import { useBoards } from '@/hooks/useQueries';
+import { useBoards } from '@/hooks/api/useBoards';
 
 import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
 

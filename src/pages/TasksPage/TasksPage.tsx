@@ -14,7 +14,9 @@ import {
 } from 'antd';
 import { SearchOutlined, FilterOutlined, EyeOutlined, ProjectOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
-import { useTasks, useBoards, useUsers } from '@/hooks/useQueries';
+import { useTasks } from '@/hooks/api/useTask';
+import { useBoards } from '@/hooks/api/useBoards';
+import { useUsers } from '@/hooks/api/useUsers';
 import { useModal } from '@/context/ModalContext';
 import { Task, TaskPriority, TaskStatus } from '@/types';
 import { GetTasksParams } from '@/types/api';
@@ -141,8 +143,6 @@ const TasksPage: React.FC = () => {
     taskId: number,
     boardName?: string
   ): void => {
-    console.log('GoToBoard called with:', { boardId, taskId, boardName, params });
-
     if (!boardId && params.board) {
       navigate(`/board/${params.board}`, { state: { taskId } });
       return;
