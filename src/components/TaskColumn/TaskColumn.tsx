@@ -57,10 +57,6 @@ const TaskColumn: React.FC<TaskColumnProps> = ({
     }
   }, [connectDrop]);
 
-  useEffect(() => {
-    console.log('Tasks updated in column:', status, tasks);
-  }, [tasks, status]);
-
   const getColumnClass = () => {
     let className = 'task-column';
 
