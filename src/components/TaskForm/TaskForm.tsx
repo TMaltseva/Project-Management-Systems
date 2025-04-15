@@ -76,6 +76,16 @@ const TaskForm: React.FC<TaskFormProps> = ({ initialValues, onSuccess }) => {
     }
   };
 
+  const handleReset = () => {
+    const initialAssigneeId = initialValues?.assignee?.id;
+
+    form.resetFields();
+
+    if (initialAssigneeId) {
+      form.setFieldValue('assigneeId', initialAssigneeId);
+    }
+  };
+
   const handleGotoBoard = (): void => {
     const formBoardId: unknown = form.getFieldValue('boardId');
 
@@ -198,7 +208,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ initialValues, onSuccess }) => {
         )}
 
         <Space>
-          <Button onClick={() => form.resetFields()}>Reset</Button>
+          <Button onClick={handleReset}>Reset</Button>
           <Button type="primary" htmlType="submit" loading={isLoading}>
             {initialValues?.id ? 'Update' : 'Create'} task
           </Button>
