@@ -6,6 +6,16 @@
       display: flex;
       align-items: center;
 
+      .logo-icon {
+        font-size: 24px;
+        color: white;
+        margin-right: 8px;
+        
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
       .logo-text {
         font-size: 18px;
         font-weight: 600;

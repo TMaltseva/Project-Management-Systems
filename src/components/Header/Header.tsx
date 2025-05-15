@@ -29,13 +29,7 @@ const Header: React.FC = () => {
   return (
     <AntHeader className="app-header">
       <div className="app-header__logo">
-        <ProjectFilled
-          style={{
-            fontSize: '24px',
-            color: 'white',
-            marginRight: '8px',
-          }}
-        />
+        <ProjectFilled className="logo-icon" />
         <span className="logo-text">PMS</span>
       </div>
       <div className="app-header__nav">
